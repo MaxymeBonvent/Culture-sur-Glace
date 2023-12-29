@@ -1,0 +1,908 @@
+/* PAGE */
+html{
+    /* Défilement en douceur */
+    scroll-behavior: smooth;
+}
+
+/* CORPS DE LA PAGE */
+body{
+    /* Fond */
+    background-color: rgb(0, 120, 255);
+
+    /* Durée d'animation */
+    transition: 1s;
+
+    /* Position des éléments internes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MODE NUIT DU BODY */
+.mode_nuit_body{
+    background-color: black;
+}
+
+/* IMAGE ASTRE */
+#astre{
+    /* Dimensions */
+    width: 60px;
+    height: 60px;
+
+    /* Fond */
+    background-color: rgb(100, 0, 220);
+    border-radius: 40px;
+
+    /* Espace interne */
+    padding: 10px;
+
+    /* Espace externe en haut */
+    margin-top: 10px;
+
+    /* Durée d'animation */
+    transition: 0.4s;
+}
+
+/* SURVOL DE L'ASTRE */
+#astre:hover{
+    /* Échelle */
+    transform: scale(1.2, 1.2);
+
+    /* Souris */
+    cursor: pointer;
+}
+
+/* HEADER, FOOTER ET SECTIONS */
+header, footer, section{
+    /* Contour */
+    border: 2px solid black;
+    border-radius: 20px;
+
+    /* Fond */
+    background: linear-gradient(rgb(0, 110, 200), cornflowerblue);
+
+    /* Durée d'animation */
+    transition: 1s;
+
+    /* Position des éléments internes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODE NUIT DES HEADER, FOOTER ET SECTIONS */
+.mode_nuit_h_f_s{
+    /* Contour */
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 20px;
+
+    /* Fond */
+    background: linear-gradient(rgb(0, 60, 220), rgb(0, 100, 200));
+}
+
+/* HEADER ET FOOTER */
+header, footer{
+    /* Dimensions */
+    width: 100%;
+}
+
+/* TITRE ET SOUS-TITRES */
+h1, h2, h3{
+    /* Centrage */
+    text-align: center;
+}
+
+/* DIV SOMBRE */
+#div_sombre{
+    /* Durée d'animation */
+    transition: 1s;
+}
+
+/* CLASSE SOMBRE */
+.sombre{
+    /* La div est toujours au même endroit */
+    position: fixed;
+
+    /* Depuis le coin sup. haut de la page, le coin supérieur gauche de la div est déplacé de 50% vers le bas puis vers la droite ce qui place ce coin au centre de la page */
+    top: 50%;
+    left: 50%;
+
+    /* Dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* Le coin supérieur gauche de la div est ensuite déplacé de 50% vers la gauche puis vers le haut par rapport aux dimensions de celle-ci ce qui fait coincider son centre avec celui de la page */
+    transform: translate(-50%, -50%);
+
+    /* Fond */
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN */
+main{
+    /* Dimensions */
+    width: 100%;
+
+    /* Position des éléments internes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SECTIONS */
+section{
+    /* Dimensions */
+    width: 60%;
+
+    /* Espace externe */
+    margin: 10px 0;
+}
+
+/* DIVS DES LIVRES */
+.div_livre{
+    /* Dimensions */
+    width: 90%;
+
+    /* Espace externe */
+    margin: 10px;
+
+    /* Position des éléments internes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PHOTO DES LIVRES */
+.livre{
+    /* Dimensions */
+    width: 40%;
+    height: 80%;
+}
+
+/* PHOTO DU SCULPTEUR */
+.sculpteur{
+    /* Dimensions */
+    width: 40%;
+}
+
+/* FIGURES */
+figure{
+    /* Contour */
+    border: 2px solid black;
+    border-radius: 20px;
+
+    /* Dimensions */
+    width: 30%;
+    height: 200px;
+
+    /* Fond */
+    background: linear-gradient(rgb(0, 110, 200), cornflowerblue);
+
+    /* Position des éléments internes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* LÉGENDES */
+figcaption{
+    /* Taille du texte */
+    font-size: 24px;
+
+    /* Centrage */
+    text-align: center;
+}
+
+/* SCULPTURES */
+.sculpture{
+    /* Dimensions */
+    width: 50%;
+
+    /* Souris */
+    cursor: pointer;
+
+    /* Durée d'animation */
+    transition: 1s ease;
+}
+
+/* POSITION CENTRALE */
+.centre{
+    /* L'image agrandi est visible tout le long de la page */
+    position: fixed;
+
+    /* Le coin supérieur gauche de l'image est placé au centre de la page */
+    top: 50%;
+    left: 50%;
+
+    /* Dimensions de l'image une fois agrandi */
+    width: 40%;
+
+    /* Le coin supérieur gauche de l'image est déplacée de moitié vers la gauche et vers le haut selon ses propres dimensions pour que son centre coincide avec celui de la page */
+    transform: translate(-50%, -50%);
+
+    /* Ombre de l'image */
+    box-shadow: 0 0 10px white;
+}
+
+/* DIV SCULPTURES */
+.div_sculptures{
+    /* Dimensions */
+    width: 80%;
+
+    /* Espace externe */
+    margin: 10px;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAVIGATION */
+nav{
+    /* Position des éléments internes */
+    display: flex;
+}
+
+/* DIVS DE LA NAVIGATION */
+nav div{
+    /* Fond */
+    background-color: rgb(100, 0, 220);
+
+    /* Espace interne */
+    padding: 4px;
+
+    /* Bord droit */
+    border-right: 1px solid white;
+
+    /* Durée d'animation */
+    transition: 0.4s;
+
+    /* Position des éléments internes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DERNIÈRE DIV DE LA NAVIGATION */
+nav div:last-child{
+    /* Bord droit */
+    border-right: 1px solid transparent;
+}
+
+/* SURVOL DES DIVS DE LA NAVIGATION */
+nav div:hover{
+    transform: scale(1.2, 1.2);
+}
+
+/* LIENS DE LA NAVIGATION */
+nav a{
+    /* Taille */
+    font-size: 24px;
+
+    /* Couleur */
+    color: rgb(200, 200, 200);
+
+    /* Soulignement */
+    text-decoration: none;
+
+    /* Durée d'animation */
+    transition: 0.4s;
+}
+
+/* LIENS LA SECTION VIDÉO */
+section a{
+    /* Taille */
+    font-size: 24px;
+
+    /* Couleur */
+    color: black;
+
+    /* Espace externe */
+    margin: 10px 0;
+
+    /* Centrage */
+    text-align: center;
+
+    /* Durée d'animation */
+    transition: 0.4s;
+}
+
+/* SURVOL DES LIENS LA SECTION VIDÉO */
+section a:hover{
+    /* Fond */
+    background-color: rgb(180, 180, 180);
+
+    /* Taille */
+    font-size: 26px;
+
+    /* Espace interne */
+    padding: 8px;
+}
+
+/* PARAGRAPHES */
+p{
+    /* Taille */
+    font-size: 24px;
+
+    /* Centrage */
+    text-align: center;
+}
+
+/* MODE NUIT DES TITRES, SOUS-TITRES ET PARAGRAPHES */
+.mode_nuit_t_st_p{
+    /* Couleur */
+    color: black;
+}
+
+/* IMAGES DANS LES SECTIONS */
+section img{
+    /* Dimensions */
+    width: 80%;
+
+    /* Espace externe */
+    margin: 10px;
+
+    /* Ombre */
+    box-shadow: 4px 4px 10px black;
+}
+
+/* LIEN DE RETOUR AU SOMMET */
+#flèche_sommet{
+    /* Dimensions */
+    width: 0;
+    height: 0;
+
+    /* Position */
+    position: fixed;
+    bottom: 2%;
+    right: 4%;
+
+    /* Contours */
+    border-top: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid rgb(180, 180, 180);
+    border-left: 40px solid transparent;
+}
+
+/* VERSION TRÈS PETITE */
+@media all and (max-width:359px){
+    /* ASTRE */
+    #astre{
+        /* Dimensions */
+        width: 20px;
+        height: 20px;
+    }
+
+    /* TITRE */
+    h1{
+        /* Taille */
+        font-size: 20px;
+    }
+
+    /* SOUS-TITRES */
+    h2{
+        /* Taille */
+        font-size: 18px;
+    }
+
+    /* NAVIGATION */
+    nav{
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* DIVS DE LA NAVIGATION */
+    nav div{
+        /* Contour */
+        border: 1px solid transparent;
+
+        /* Contour en bas*/
+        border-bottom: 1px solid white;
+
+        /* Position des éléments internes */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* DERNIÈRE DIV DE LA NAVIGATION */
+    nav div:last-child{
+        /* Bord inférieur */
+        border-bottom: 1px solid transparent;
+    }
+
+    /* LIENS DE LA NAVIGATION  */
+    nav a{
+        /* Taille */
+        font-size: 18px;
+    }
+
+    /* MAIN */
+    main{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* SECTIONS */
+    section{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* LIENS DES SECTIONS ET PARAGRAPHES */
+    section a, p{
+        /* Taille */
+        font-size: 20px;
+    }
+
+    /* DIV SCULPTURES */
+    .div_sculptures{
+        /* Dimensions */
+        width: 90%;
+
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* FIGURES */
+    figure{
+        /* Dimensions */
+        width: 80%;
+    }
+
+    /* LÉGENDES */
+    figcaption{
+        /* Taille du texte */
+        font-size: 18px;
+    }
+
+    /* LIEN DE RETOUR AU SOMMET */
+    #flèche_sommet{
+        /* Contours */
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid rgb(180, 180, 180);
+        border-left: 20px solid transparent;
+    }
+}
+
+/* VERSION PETITE */
+@media all and (min-width:360px) and (max-width:767px){
+    /* ASTRE */
+    #astre{
+        /* Dimensions */
+        width: 20px;
+        height: 20px;
+    }
+
+    /* TITRE */
+    h1{
+        /* Taille */
+        font-size: 20px;
+    }
+
+    /* SOUS-TITRES */
+    h2{
+        /* Taille */
+        font-size: 18px;
+    }
+
+    /* NAVIGATION */
+    nav{
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* DIVS DE LA NAVIGATION */
+    nav div{
+        /* Contour */
+        border: 1px solid transparent;
+
+        /* Contour en bas*/
+        border-bottom: 1px solid white;
+
+        /* Position des éléments internes */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* DERNIÈRE DIV DE LA NAVIGATION */
+    nav div:last-child{
+        /* Bord inférieur */
+        border-bottom: 1px solid transparent;
+    }
+
+    /* LIENS DE LA NAVIGATION  */
+    nav a{
+        /* Taille */
+        font-size: 18px;
+    }
+
+    /* SECTIONS */
+    section{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* LIENS DES SECTIONS ET PARAGRAPHES */
+    section a, p{
+        /* Taille */
+        font-size: 20px;
+    }
+
+    /* DIV SCULPTURES */
+    .div_sculptures{
+        /* Dimensions */
+        width: 90%;
+
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* FIGURES */
+    figure{
+        /* Dimensions */
+        width: 80%;
+    }
+
+    /* LÉGENDES */
+    figcaption{
+        /* Taille du texte */
+        font-size: 18px;
+    }
+
+    /* LIEN DE RETOUR AU SOMMET */
+    #flèche_sommet{
+        /* Contours */
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid rgb(180, 180, 180);
+        border-left: 20px solid transparent;
+    }
+}
+
+/* VERSION MOYENNE */
+@media all and (min-width:768px) and (max-width:819px){
+    /* ASTRE */
+    #astre{
+        /* Dimensions */
+        width: 60px;
+        height: 60px;
+    }
+
+    /* TITRE */
+    h1{
+        /* Taille */
+        font-size: 30px;
+    }
+
+    /* SOUS-TITRES */
+    h2{
+        /* Taille */
+        font-size: 28px;
+    }
+
+    /* NAVIGATION */
+    nav{
+        /* Position des éléments internes */
+        display: flex;
+    }
+
+    /* DIVS DE LA NAVIGATION */
+    nav div{
+        /* Contour */
+        border: 1px solid transparent;
+
+        /* Contour droit */
+        border-right: 1px solid white;
+
+        /* Position des éléments internes */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* DERNIÈRE DIV DE LA NAVIGATION */
+    nav div:last-child{
+        /* Bord droit */
+        border-right: 1px solid transparent;
+    }
+
+    /* LIENS DE LA NAVIGATION  */
+    nav a{
+        /* Taille */
+        font-size: 26px;
+    }
+
+    /* SECTIONS */
+    section{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* LIENS DES SECTIONS ET PARAGRAPHES */
+    section a, p{
+        /* Taille */
+        font-size: 26px;
+    }
+
+    /* DIV SCULPTURES */
+    .div_sculptures{
+        /* Dimensions */
+        width: 90%;
+
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FIGURES */
+    figure{
+        /* Dimensions */
+        width: 80%;
+    }
+
+    /* LÉGENDES */
+    figcaption{
+        /* Taille du texte */
+        font-size: 26px;
+    }
+
+    /* LIEN DE RETOUR AU SOMMET */
+    #flèche_sommet{
+        /* Contours */
+        border-top: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid rgb(180, 180, 180);
+        border-left: 20px solid transparent;
+    }
+}
+
+/* VERSION GRANDE */
+@media all and (min-width:820px) and (max-width:1023px){
+    /* ASTRE */
+    #astre{
+        /* Dimensions */
+        width: 60px;
+        height: 60px;
+    }
+
+    /* TITRE */
+    h1{
+        /* Taille */
+        font-size: 40px;
+    }
+
+    /* SOUS-TITRES */
+    h2{
+        /* Taille */
+        font-size: 32px;
+    }
+
+    /* NAVIGATION */
+    nav{
+        /* Position des éléments internes */
+        display: flex;
+    }
+
+    /* DIVS DE LA NAVIGATION */
+    nav div{
+        /* Contour */
+        border: 1px solid transparent;
+
+        /* Contour droit */
+        border-right: 1px solid white;
+
+        /* Position des éléments internes */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* DERNIÈRE DIV DE LA NAVIGATION */
+    nav div:last-child{
+        /* Bord droit */
+        border-right: 1px solid transparent;
+    }
+
+    /* LIENS DE LA NAVIGATION  */
+    nav a{
+        /* Taille */
+        font-size: 26px;
+    }
+
+    /* MAIN */
+    main{
+        /* Dimensions */
+        width: 80%;
+    }
+
+    /* SECTIONS */
+    section{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* LIENS DES SECTIONS ET PARAGRAPHES */
+    section a, p{
+        /* Taille */
+        font-size: 28px;
+    }
+
+    /* DIV SCULPTURES */
+    .div_sculptures{
+        /* Dimensions */
+        width: 80%;
+
+        /* Position des éléments internes */
+        display: flex;
+    }
+
+    /* FIGURES */
+    figure{
+        /* Dimensions */
+        width: 90%;
+    }
+
+    /* LÉGENDES */
+    figcaption{
+        /* Taille du texte */
+        font-size: 26px;
+    }
+
+    /* PHOTO DU SCULPTEUR */
+    .sculpteur{
+        /* Dimensions */
+        width: 40%;
+    }
+
+    /* SCULPTURE */
+    .sculpture{
+        /* Dimensions */
+        width: 30%;
+    }
+
+    /* LIEN DE RETOUR AU SOMMET */
+    #flèche_sommet{
+        /* Contours */
+        border-top: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid rgb(180, 180, 180);
+        border-left: 40px solid transparent;
+    }
+}
+
+/* VERSION TRÈS GRANDE */
+@media all and (min-width:1024px) and (max-width:1280px){
+    /* ASTRE */
+    #astre{
+        /* Dimensions */
+        width: 60px;
+        height: 60px;
+    }
+
+    /* TITRE */
+    h1{
+        /* Taille */
+        font-size: 40px;
+    }
+
+    /* SOUS-TITRES */
+    h2{
+        /* Taille */
+        font-size: 32px;
+    }
+
+    /* NAVIGATION */
+    nav{
+        /* Position des éléments internes */
+        display: flex;
+    }
+
+    /* DIVS DE LA NAVIGATION */
+    nav div{
+        /* Contour */
+        border: 1px solid transparent;
+
+        /* Contour droit */
+        border-right: 1px solid white;
+
+        /* Position des éléments internes */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* DERNIÈRE DIV DE LA NAVIGATION */
+    nav div:last-child{
+        /* Bord droit */
+        border-right: 1px solid transparent;
+    }
+
+    /* LIENS DE LA NAVIGATION  */
+    nav a{
+        /* Taille */
+        font-size: 26px;
+    }
+
+    /* MAIN */
+    main{
+        /* Dimensions */
+        width: 80%;
+    }
+
+    /* SECTIONS */
+    section{
+        /* Dimensions */
+        width: 100%;
+    }
+
+    /* DIV SCULPTURES */
+    .div_sculptures{
+        /* Dimensions */
+        width: 80%;
+
+        /* Position des éléments internes */
+        display: flex;
+    }
+
+    /* FIGURES */
+    figure{
+        /* Dimensions */
+        width: 30%;
+        height: 200px;
+
+        /* Position des éléments internes */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    /* LÉGENDES */
+    figcaption{
+        /* Taille du texte */
+        font-size: 20px;
+    }
+
+    /* PHOTO DU SCULPTEUR */
+    .sculpteur{
+        /* Dimensions */
+        width: 40%;
+    }
+
+    /* SCULPTURE */
+    .sculpture{
+        /* Dimensions */
+        width: 70%;
+    }
+
+    /* PARAGRAPHES */
+    p{
+        /* Taille */
+        font-size: 28px;
+    }
+
+    /* LIEN DE RETOUR AU SOMMET */
+    #flèche_sommet{
+        /* Contours */
+        border-top: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 40px solid rgb(180, 180, 180);
+        border-left: 40px solid transparent;
+    }
+}
